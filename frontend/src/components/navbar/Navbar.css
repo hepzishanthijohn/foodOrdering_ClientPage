@@ -1,0 +1,195 @@
+/* General Nav Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  min-width: 1500px;
+  padding: 25px 10px;
+  margin-bottom: 25px;
+  position: relative;
+  background-color: #FF5733; /* Orange background */
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* Divider line below nav */
+nav::after {
+  content: "";
+  position: absolute;
+  height: 0.6px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(201, 201, 201);
+}
+
+/* Logo Section */
+nav .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white; /* Logo text in white */
+}
+
+/* Links Section (Aligning links to the right) */
+nav .navLinks {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center;
+}
+
+/* Links Styling */
+nav .navLinks .links a {
+  text-decoration: none;
+  color: #fff; /* Links in white */
+  font-size: 20px;
+  font-weight: 200;
+  margin-left: 90px; /* Add space between links */
+}
+
+nav .navLinks .links a:hover {
+  color: #161515; /* Darker color when hovering */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Menu Button Styling */
+nav .menuBtn {
+  padding: 8px 20px;
+  color: black;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav .navLinks .links .menuBtn:hover {
+  color: black; /* Orange color when hovered */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background-color: white;
+}
+
+/* Cart Button */
+nav .cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .cart-btn .cart-icon {
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+nav .cart-btn .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #fff;
+  color: #FF5733; /* Cart count in orange */
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+
+/* Hamburger Icon */
+nav .hamburger {
+  display: none;
+}
+
+/* Hamburger Icon for smaller screens */
+nav svg {
+  font-size: 1.75rem;
+}
+
+/* Media Queries */
+@media (max-width: 1520px) {
+  nav {
+    min-width: 100%;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  nav {
+    z-index: 20;
+    position: unset;
+    background: #FF5733; /* Maintain the orange background */
+    padding: 10px 30px;
+  }
+
+  nav::after {
+    display: none;
+  }
+
+  nav .hamburger {
+    display: flex;
+  }
+
+  nav .navLinks .links a {
+    display: flex;
+    margin-left: 30px;
+    color: black; /* Adjust for smaller screens */
+  }
+
+  nav .navLinks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -100%;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    padding: 15px 7.5px;
+    z-index: -1;
+    transition: 0.3s;
+  }
+
+  nav .showmenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 67px;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    padding: 15px 7.5px;
+    transition: 0.3s;
+    margin: 0 15px;
+    width: 96.7vw;
+    margin-right: 30px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  nav .showmenu .links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav .menuBtn {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  nav .showmenu {
+    width: 96vw;
+    z-index: 999;
+  }
+}
+
+@media (max-width: 650px) {
+  nav .showmenu {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}

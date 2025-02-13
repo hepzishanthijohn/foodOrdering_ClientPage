@@ -1,0 +1,238 @@
+.cart-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cart-item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .cart-item-details {
+    margin-left: 20px;
+    flex-grow: 1;
+  }
+  
+  .item-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .quantity-price {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .quantity-price span {
+    display: block;
+  }
+  
+  .cart-total {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cart-total h3 {
+    color: #ff6347; /* Tomato red color for the total */
+  }
+  
+
+  /* Payment Options Section */
+.payment-options {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+  }
+  
+  .payment-options h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Payment Method Container */
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual Payment Method */
+  .payment-method {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .payment-method input {
+    margin-right: 90px;
+    accent-color: #FF5733; /* Orange color for radio buttons */
+  }
+  
+ 
+  .payment-method input:checked + label {
+    color: #FF5733; /* Orange color when checked */
+    font-weight: 600;
+  }
+  
+  /* Checkout Button Styling */
+  .checkout-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #FF5733;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #e14c28;
+    transform: translateY(-2px); /* Slight upward movement on hover */
+  }
+  
+  .checkout-btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+ /* General Payment Methods Styling */
+
+  
+ .payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-direction: row-reverse; /* This will place the label on the left side of the radio button */
+  }
+  
+  .payment-method input[type="radio"] {
+    margin-left: 20px; /* Adds some spacing between the label and radio button */
+  }
+  
+  .payment-method label {
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+    font-size: 16px; /* Default font size */
+    display: inline-block;
+    padding-right: 50px;
+    transition: font-size 0.3s ease;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1028px) {
+    .payment-options {
+      padding: 20px;
+    }
+  
+    .payment-method {
+      font-size: 16px;
+    }
+  
+    .checkout-btn {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .payment-method label {
+      font-size: 15px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 838px) {
+    .payment-method label {
+      font-size: 14px; /* Further reduce font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 786px) {
+    .payment-method label {
+      font-size: 13px; /* Reduce font size even further */
+    }
+  }
+  
+  @media (max-width: 708px) {
+    .payment-method label {
+      font-size: 13px; /* Consistent smaller font */
+    }
+  }
+  
+  @media (max-width: 638px) {
+    .payment-method label {
+      font-size: 12px; /* Further reduce font size for extra small screens */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .payment-method label {
+      font-size: 11px; /* Smaller font size for very small screens */
+    }
+  }
+  
+  @media (max-width: 424px) {
+    .payment-method label {
+      font-size: 10px; /* Smallest font size for mobile devices */
+    }
+  
+    .checkout-btn {
+      font-size: 14px; /* Adjust checkout button size */
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .payment-method label {
+      font-size: 9px; /* Very small font size for the smallest screens */
+    }
+  
+    .checkout-btn {
+      font-size: 12px; /* Adjust button size accordingly */
+      padding: 8px 12px;
+    }
+  }
+  
